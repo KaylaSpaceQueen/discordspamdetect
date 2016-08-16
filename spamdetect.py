@@ -36,6 +36,9 @@ class spamUserContainer:
         if len(message.content) >= spamUserContainer.totalLength:
             violationCount += 1
 
+        if violationCount >= totalViolations:
+            isASpammer = True
+
         return isASpammer
 
     def resetViolations(self):
