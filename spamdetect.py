@@ -32,11 +32,11 @@ class spamUserContainer:
         oldestTime = self.timeStampList[-1]     
         timeDifference = (oldestTime-newestTime).total_seconds()
         if len(self.timeStampList) >= spamUserContainer.totalMessages and timeDifference <= spamUserContainer.timePeriod:
-            violationCount += 1
+            self.violationCount += 1
         if len(message.content) >= spamUserContainer.totalLength:
-            violationCount += 1
+            self.violationCount += 1
 
-        if violationCount >= totalViolations:
+        if self.violationCount >= spamUserContainer.totalViolations:
             isASpammer = True
 
         return isASpammer
