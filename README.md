@@ -4,8 +4,9 @@ A basic spam detector for adding to your discord bots.
 
 ##Instructions
 1. import spamdetect.py in your bot's code
-2. in your on_message method drop in a conditional calling ```spamdetect.checkForSpam(message):```
-3. add a command or other event to call ```spamdetect.resetUserViolations(userID)``` where user ID string.
+2. Edit the spam definition settings at the top of the spamUserContent class
+3. in your on_message method drop in a conditional calling ```spamdetect.checkForSpam(message):```
+4. add a command or other event to call ```spamdetect.resetUserViolations(userID)``` where user ID string.
 
 ##example
 
