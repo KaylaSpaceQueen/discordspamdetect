@@ -5,7 +5,8 @@ class spamUserContainer:
     
     #---spam definitions---
     #if numbers of messsages is greater than totalMessages over a period of timePeriod seconds
-    #or if number of characters in the messages is greater than totalLength, then mark user as spammer
+    #or if number of characters in the messages is greater than totalLength, then increment violations by 1
+    #if the total number of violations is greater than or equal to totalViolations then isSpammer() will return True
     timePeriod = 5
     totalMessages = 5
     totalLength = 1024
